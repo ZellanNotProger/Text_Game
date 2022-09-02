@@ -6,36 +6,36 @@ namespace Text_Game
    {
 	  public static void Main()
 	  {
-		 var game = new Game();
-		 var fight = new Fight();
+		 var _game = new Game();
+		 var _fight = new Fight();
 
-		 game.Start();
+		 _game.Start();
 
-		 fight.Difficulty();
+		 _fight.Difficulty();
 
-		 game.PlayChapter1();
+		 _game.PlayChapter1();
 
-		 fight.FightWithMonster();
+		 _fight.FightWithMonster();
 
-		 if (fight.CheckAlive())
+		 if (_fight.CheckAlive())
 		 {
-			game.PlayChapter2();
+			_game.PlayChapter2();
 
-			fight.FightWithMonster();
+			_fight.FightWithMonster();
 
-			if (fight.CheckAlive())
+			if (_fight.CheckAlive())
 			{
-           game.PlayChapter3();
+           _game.PlayChapter3();
 			}
 
 			else
 			{
-			   game.Ending();
+			   _game.Ending();
 			}
 		 }
 		 else
 		 {
-			game.Ending();
+			_game.Ending();
 		 }
 	  }
    }
