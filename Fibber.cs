@@ -8,38 +8,16 @@ namespace Text_Game
    {
 	  private static Random randomNumber = new Random();
 
-	  Dictionary<int, string> moriartiAtk = new Dictionary<int, string>()
-	   {
-		  {0, " Moriarti нанес урон игроку Monster"},
-		  {1, " Moriarti отразил удар игрока Monster"}
-	   };
+	  string moriartiAtk = new string() {" Moriarti нанес урон игроку Monster", " Moriarti отразил удар игрока Monster"};
 
-	  Dictionary<int, string> monsterAtk = new Dictionary<int, string>()
-		{
-		  {0, " Monster нанес урон игроку Moriarti"},
-		  {1, " Monster отразил удар игрока Moriarti"}
-		};
-
-	  Dictionary<int, string> moriartiDef = new Dictionary<int, string>()
-	   {
-		  {0, " Moriarti не попал по игроку Monster"},
-		  {1, " Monster уклонился от удара игрока Moriarti"},
-		  {2, " Monster пред-угодал удар игрока Monster и уклонился"}
-	   };
-
-	  Dictionary<int, string> monsterDef = new Dictionary<int, string>()
-	   {
-		  {0, " Monster не попал по игроку Moriarti"},
-		  {1, " Moriarti уклонился от удара игрока Monster"},
-		  {2, " Moriarti пред-угодал удар игрока Monster и уклонился"}
-	   };
-
-	  Dictionary<int, string> moriartiDeath = new Dictionary<int, string>()
-	  {
-		  {1, "\n Monster подходит к вам... \n Пинает и уходит \n Вы не отреагировали т.к. были мертвы \n Game Over! \n Press F"},
-		  {0, "\n По итогу монстр оказался сильнее. \n Чем вы расчитывали... \n Game Over! \n Press F"}
-	  }; 
+	  string monsterAtk = new string() {" Monster нанес урон игроку Moriarti", " Monster отразил удар игрока Moriarti"};
 	  
+	  string moriartiDef = new string() {" Moriarti не попал по игроку Monster", " Monster уклонился от удара игрока Moriarti", " Monster предугадал удар игрока Monster и уклонился"};
+
+	  string monsterDef = new string() {" Monster не попал по игроку Moriarti", " Moriarti уклонился от удара игрока Monster", " Moriarti предугадал удар игрока Monster и уклонился"};
+
+	  string moriartiDeath = new string() {"\n Monster подходит к вам... \n Пинает и уходит \n Вы не отреагировали т.к. были мертвы \n Game Over! \n Press F", "\n По итогу монстр оказался сильнее. \n Чем вы расчитывали... \n Game Over! \n Press F"};
+
 	  public void Atack()
 	  {
 		 Console.WriteLine(moriartiAtk[randomNumber.Next(2)]);
